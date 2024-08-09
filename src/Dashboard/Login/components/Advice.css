@@ -1,0 +1,24 @@
+/* Advice.css */
+.adviceBox {
+    width: 40vw;
+    height: 60vh;
+    background-color: #4526D1;
+    border-radius: 10px; /* Corrected px to px */
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; /* Center horizontally */
+    justify-content: center; /* Center vertically */
+}
+
+.highlightStyle {
+    font-size: 1.2em;
+    color: #ffdd57;
+}
+
+.h1Advice {
+    color: #FFFF;
+    font-family: 'Arial', sans-serif; /* Sets the font family */
+    font-size: 3rem; /* Adjusts the font size */
+    font-weight: bold; /* Makes the text bold */
+    text-align: center; /* Centers text inside the h1 element */
+}
