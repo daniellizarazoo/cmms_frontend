@@ -1,14 +1,11 @@
-import { useState } from 'react'
-import LoginDashboard from './Dashboard/Login/loginDashboard'
+import Aplicacion from "./Dashboard/Main/Aplicacion/Aplicacion"
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
-      <LoginDashboard/>
+      <Aplicacion/>
     </>
-    
   )
 }
 

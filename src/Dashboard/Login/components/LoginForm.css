@@ -60,3 +60,23 @@ input {
 .submitButton:hover {
     background-color: darkblue; /* Cambia el color de fondo al pasar el ratón */
 }
+
+.checkBox {
+    display: flex;           /* Alinea el label y el checkbox en una fila */
+    align-items: center;     /* Centra verticalmente el label y el checkbox */
+    margin-bottom: 20px;     /* Agrega espacio debajo del grupo de checkbox */
+}
+
+.checkBox input[type="checkbox"] {
+    margin: 0;               /* Elimina el margen predeterminado */
+    vertical-align: middle; /* Asegura que el checkbox se alinee verticalmente con el texto */
+    width: 20px;             /* Ajusta el ancho del checkbox */
+    height: 20px;            /* Ajusta la altura del checkbox */
+    transform: scale(1.2);   /* Escala el checkbox al 120% de su tamaño original */
+}
+
+.checkBox label {
+    margin-right: 10px;      /* Agrega espacio entre el label y el checkbox */
+}
+
+

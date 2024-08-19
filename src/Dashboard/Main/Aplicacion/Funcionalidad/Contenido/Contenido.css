@@ -1,0 +1,5 @@
+.contenido {
+    height: 100%; /* Altura completa del contenedor */
+    width: 100vw;
+    overflow: auto; /* Permite el scroll si el contenido es mayor que la pantalla */
+}

@@ -1,0 +1,225 @@
+.userpage {
+    background-color: #212e49;
+    min-width: 50%;
+    min-height: 100%;
+    margin: 2%;
+    padding: 2%;
+    border-radius: 8px; /* Increased radius for smoother corners */
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+h1 {
+    padding: 0;
+    margin: 0;
+    color: white;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 2em; /* Increased font size for emphasis */
+}
+
+table {
+    width: 100%;
+    border-collapse: separate; /* Allows for individual cell styling */
+    border-spacing: 0 10px; /* Adds space between rows */
+}
+
+th {
+    background-color: rgba(251, 251, 251, 0.945);
+    padding: 15px;
+    border: 1px solid #ccc; /* Light border for contrast */
+    border-radius: 5px;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.1em; /* Slightly larger font for headers */
+}
+
+td {
+    padding: 15px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 15px;
+    background-color: rgba(33, 46, 73, 0.8); /* Slightly lighter background for cells */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Subtle bottom border */
+}
+
+tr:nth-child(even) td {
+    background-color: rgba(81, 99, 139, 0.9); /* Darker background for alternating rows */
+}
+
+button {
+    margin-right: 5px;
+    padding: 8px; /* Increased padding for a more substantial feel */
+    border: none;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px; /* Slightly larger radius for softer corners */
+    transition: background-color 0.3s ease; /* Smooth hover transition */
+}
+
+button.eliminar{
+    background-color: red;
+}
+
+button.eliminar:hover{
+    background-color: rgb(225, 153, 20);
+}
+
+button:hover {
+    background-color: #0a37eb;
+}
+
+input[type="checkbox"] {
+    cursor: not-allowed;
+    transform: scale(1.2); /* Increase checkbox size slightly */
+    vertical-align: middle; /* Align checkbox to middle of the cell */
+}
+
+input[type="checkbox"]:disabled {
+    background-color: #ccc; /* Grey out checkbox when disabled */
+}
+
+.show-more {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.show-more button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.show-more button:hover {
+    background-color: #0056b3;
+}
+
+.spanUser {
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    justify-content: left; /* Ensures the span content is aligned to the left */
+}
+
+.spanUser img {
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+}
+
+.cajaBusqueda {
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    margin-bottom: 20px; /* Espacio debajo de la caja de búsqueda */
+    gap: 10px;
+    background-color: #314163; /* Fondo para destacar la caja de búsqueda */
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+.cajaBusqueda h3 {
+    margin: 0;
+    color: white;
+    font-size: 1.2em; /* Tamaño de fuente para el texto de búsqueda */
+}
+
+.cajaBusqueda input[type="text"] {
+    padding: 8px 12px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%; /* Ocupa todo el espacio disponible */
+    max-width: 300px; /* Máximo ancho para no exceder */
+}
+
+.cajaBusqueda button {
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cajaBusqueda button:hover {
+    background-color: #0056b3;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo difuminado */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000; /* Asegura que esté sobre todo */
+}
+
+.editUser {
+    position: relative;
+    width: 400px; /* Ajusta el tamaño según sea necesario */
+    background-color: rgba(204, 200, 200, 0.916); /* Fondo blanco sin opacidad */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Sombra para destacarlo */
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.closeButton {
+    background: none;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    color: #333;
+}
+
+.closeButton:hover {
+    background-color: black;
+    color: red;
+}
+
+.editForm {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Espacio entre cada etiqueta y campo de entrada */
+}
+
+.formGroup {
+    display: flex;
+    align-items: center;
+}
+
+.formGroup label {
+    margin-right: 10px;
+    flex: 1;
+}
+
+.formGroup input,
+.formGroup select {
+    flex: 2;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.formGroup input[type="checkbox"] {
+    cursor: pointer; /* Cambia el cursor a una mano cuando pasa sobre el checkbox */
+}

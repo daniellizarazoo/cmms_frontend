@@ -1,0 +1,42 @@
+/* Sidebar.css */
+.sidebar {
+    width: 18%;
+    background-color: #262B49; /* Dark background for the sidebar */
+    padding: 20px;
+    height: 100%;
+    box-sizing: border-box; /* Incluye padding y border en el ancho total */
+}
+
+.sidebar-list {
+    list-style-type: none; /* Remove default list styling */
+    padding: 0;
+    margin: 0; /* Ensure no default margin */
+}
+
+.sidebar-item {
+    margin: 10px 0; /* Spacing between items */
+    padding: 10px; /* Padding inside each list item */
+    border-radius: 4px; /* Rounded corners for the border */
+    border: 1px solid #ffffff; /* White border around the list item */
+    background-color: #333a6d; /* Background color for each item */
+}
+
+.sidebar-item:hover {
+    background-color: #4a4a8f; /* Change background color on hover */
+}
+
+.sidebar-link {
+    text-decoration: none; /* Remove underline from links */
+    color: #ffffff; /* Text color */
+    display: flex; /* Flexbox for aligning items */
+    align-items: center; /* Center items vertically */
+    font-family: 'Roboto', sans-serif; /* Font style for the link text */
+    font-size: 18px; /* Font size for the link text */
+    font-weight: 500; /* Font weight for the link text */
+}
+
+.sidebar-icon {
+    width: 50px; /* Icon width */
+    height: 50px; /* Icon height */
+    margin-right: 15px; /* Space between icon and text */
+}

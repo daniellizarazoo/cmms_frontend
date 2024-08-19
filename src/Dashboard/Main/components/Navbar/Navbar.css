@@ -1,0 +1,60 @@
+/* Navbar.css */
+/* @import url('https://fonts.googleapis.com/css2?family=Viga&display=swap'); */
+
+/* Navbar.css */
+.Navbar {
+    display: flex;
+    justify-content: space-between; /* Space between left and right sections */
+    align-items: center; /* Vertically center items */
+    padding: 10px; /* Padding around the navbar */
+    background-color: #262B49; /* Dark background color */
+    color: white;
+    box-sizing: border-box; /* Include padding and border in width and height */
+    max-width: 100vw; /* Ensure it doesn't exceed viewport width */
+    overflow-x: hidden; /* Prevent horizontal overflow */
+    margin: 0 auto; /* Center align horizontally if needed */
+}
+
+.highlight{
+    color:yellow;
+}
+
+/* Apply Viga font to Navbar */
+.Navbar h2, .Navbar h1 {
+    margin: 0;
+    font-family: 'Lato', sans-serif;
+}
+
+.Navbar h2 {
+    font-size: 1.5em; /* Font size for the title */
+}
+
+.Navbar h1 {
+    font-size: 1.2em; /* Font size for the user name */
+}
+
+/* Styling for right section to avoid overflow */
+.right-section {
+    display: flex;
+    align-items: center; /* Vertically center items */
+    max-width: calc(100% - 60px); /* Adjust as needed to fit within the container */
+    overflow: hidden; /* Hide any overflow in this section */
+}
+
+/* Icon styling */
+.bellIcon, .logoutIcon {
+    width: 30px; /* Set width for icons */
+    height: 30px; /* Set height for icons */
+    max-width: 100%; /* Prevent overflow */
+    margin: 0 10px; /* Space between icons and text */
+    cursor: pointer;
+}
+
+/* Additional icon styling if needed */
+.bellIcon {
+    /* Additional styling for bell icon if needed */
+}
+
+.logoutIcon {
+    /* Additional styling for logout icon if needed */
+}

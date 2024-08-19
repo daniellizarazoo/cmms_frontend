@@ -1,0 +1,29 @@
+.notificacionCaja {
+    position: fixed;          /* Fixed position to keep it in place on scroll */
+    top: 20px;                /* Distance from the top of the viewport */
+    right: 20px;              /* Distance from the right of the viewport */
+    background-color: #f8d7da; /* Light red background color for notifications */
+    color: #721c24;           /* Dark red color for text */
+    border: 1px solid #f5c6cb; /* Border with a slightly lighter red color */
+    border-radius: 5px;       /* Rounded corners */
+    padding: 15px;            /* Padding inside the notification */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for a 3D effect */
+    z-index: 1000;            /* Ensures the notification appears on top of other elements */
+    display: flex;            /* Flexbox for alignment */
+    align-items: center;      /* Vertically center the text */
+    gap: 10px;                /* Space between the text and any other elements */
+}
+
+.notificacionCaja label {
+    margin: 0;                /* Remove default margin */
+    font-size: 1rem;          /* Adjust font size */
+}
+
+.notificacionCaja button {
+    background: transparent;  /* Transparent background for the button */
+    border: none;             /* Remove default border */
+    color: #721c24;           /* Match the text color */
+    font-size: 2rem;        /* Larger font size for the close button */
+    cursor: pointer;          /* Pointer cursor on hover */
+    margin-left: 15px;        /* Space between text and button */
+}
