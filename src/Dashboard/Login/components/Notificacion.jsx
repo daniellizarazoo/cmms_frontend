@@ -1,13 +1,21 @@
 import './Notificacion.css'
 
-const Notification = ({error}) => {
-return(
-    error ? 
-    <div className='notificacionCaja'>
-    <label>{error}</label>
-    </div>
-    : null
-)
+const Notification = ({isError=false,message=null}) => {
+
+    if (isError && message!=null){
+        return (
+            <div className='notificacionCaja'>
+                <label>{message}</label>
+            </div>
+        )
+    } else if (message!=null){
+        return(
+            <div className='notificacionCajaSuccess'>
+                <label>{message}</label>
+            </div>
+        )
+    }
+
 };
 
 export default Notification;

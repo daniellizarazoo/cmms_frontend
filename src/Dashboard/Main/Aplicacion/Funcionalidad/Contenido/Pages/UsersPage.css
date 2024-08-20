@@ -223,3 +223,46 @@ input[type="checkbox"]:disabled {
 .formGroup input[type="checkbox"] {
     cursor: pointer; /* Cambia el cursor a una mano cuando pasa sobre el checkbox */
 }
+
+.custom-alert-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .custom-alert {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .custom-alert-buttons {
+    margin-top: 20px;
+  }
+  
+  .custom-alert-buttons button {
+    margin: 0 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .custom-alert-buttons button:first-child {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .custom-alert-buttons button:last-child {
+    background-color: #ccc;
+    color: black;
+  }

@@ -1,0 +1,1 @@
+const BASEURL = 'https://cmms-backend-g8ek.onrender.com/'
