@@ -1,0 +1,47 @@
+/* Overlay.css */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000; /* High z-index to ensure it is on top */
+}
+
+.editUser {
+    position: relative;
+    width: 90%; /* Adjust size as needed */
+    background-color: rgb(255, 255, 255); /* Light background with partial transparency */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Shadow for emphasis */
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between; /* Ensures title and button are on opposite sides */
+    align-items: center; /* Vertically centers the items in the header */
+    padding-bottom: 10px; /* Space between header and content below */
+}
+
+.header h2 {
+    margin: 0; /* Removes default margin to align properly */
+    text-align: center; /* Centers text within the header */
+    flex: 1; /* Allows title to take up available space */
+    color: black;
+}
+
+.closeButton {
+    background: none;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    color: black; /* Or any color you want for the close button */
+}
+

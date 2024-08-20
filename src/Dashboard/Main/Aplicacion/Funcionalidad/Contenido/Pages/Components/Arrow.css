@@ -1,0 +1,13 @@
+.spanUser {
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    justify-content: left; /* Ensures the span content is aligned to the left */
+}
+
+.spanUser img {
+    cursor: pointer;
+    width: 25px;
+    height: 25px;
+}

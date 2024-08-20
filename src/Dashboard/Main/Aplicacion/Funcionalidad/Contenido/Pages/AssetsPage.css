@@ -1,0 +1,146 @@
+.assetsPage {
+    background-color: #212e49;
+    min-width: 50%;
+    min-height: 100%;
+    margin: 2%;
+    padding: 2%;
+    border-radius: 8px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: white;
+    font-size: 1rem;
+}
+
+.assetsPage h1 {
+    padding: 0;
+    margin: 0;
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 15px;
+    color:yellow
+}
+
+.assetsPage h2{
+    color: yellow;
+}
+
+.assetsPage h3{
+    color: yellow;
+}
+
+.filterBoxes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.filterBoxes div {
+    display: flex;
+    align-items: center;
+    background-color: #2c3e50; /* Fondo de las cajas de filtro */
+    padding: 10px;
+    border-radius: 6px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para dar profundidad */
+    transition: all 0.3s ease; /* Transición suave para el hover */
+    min-width: 200px; /* Tamaño mínimo de las cajas */
+}
+
+.filterBoxes div:hover {
+    background-color: #34495e; /* Fondo más claro al hacer hover */
+    transform: scale(1.05); /* Aumento de tamaño al hacer hover */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2); /* Sombra más intensa al hacer hover */
+}
+
+label {
+    margin-right: 10px;
+    font-size: 1.2em;
+}
+
+select {
+    padding: 10px; /* Mayor padding para mayor comodidad */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #ffffff;
+    color: #000000;
+    font-size: 1em;
+    transition: all 0.3s ease; /* Transición suave para el hover */
+}
+
+select:hover {
+    border-color: #2980b9; /* Color de borde al hacer hover */
+    background-color: #ecf0f1; /* Fondo más claro al hacer hover */
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    background-color: #34495e;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 6px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    font-size: 1.4rem;
+    cursor: pointer;
+}
+
+li:hover {
+    background-color: #2c3e50;
+    transform: scale(1.02);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+.assetsLegend {
+    width: 100%;
+    display: flex;
+    align-items: center; /* Alineación vertical en el centro */
+    justify-content: flex-start; /* Alineación horizontal a la izquierda */
+    gap:5px;
+    font-size: 1rem;
+}
+
+.assetsLegend h3 {
+    margin: 0; /* Elimina margen alrededor del título */
+    color: yellow; /* Color del texto del título *//* Espacio entre el título y el texto */
+    
+}
+
+.assetsLegend p {
+    margin: 0; /* Elimina márgenes por defecto */
+    color: white; /* Color del texto en la leyenda */
+}
+
+/* Elementos de la leyenda */
+
+
+.operational {
+    background-color: rgba(0, 128, 0, 0.685);
+}
+
+.under-maintenance {
+    background-color: rgba(255, 166, 0, 0.685);
+}
+
+.decomissioned {
+    background-color: rgba(255, 0, 0, 0.685);
+}
+
+.contentBoxInOverlay{
+    display: flex;
+    flex-direction: row;
+    gap:5px;
+}
+
+.contentBoxInOverlay .assetsInfo {
+    background-color: red;
+    width: 100%;
+}
+
+.contentBoxInOverlay .partsxAssetsInfo {
+    background-color: #212e49;
+    width: 100%;
+}
+
