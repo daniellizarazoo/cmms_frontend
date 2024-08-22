@@ -1,4 +1,5 @@
 import  { useState, useMemo ,useCallback} from 'react';
+import LabelsAssets from './Components/Labels';
 import './AssetsPage.css';
 import Arrows from './Components/Arrows';
 import Overlay from './Components/Overlay';
@@ -182,8 +183,10 @@ const AssetsPage = () => {
     const [equipmentSelected, setEquipmentSelected] = useState('');
     const [pageSlice, setPageSlice] = useState(0);
     const [assetIdClicked,setAssetIdClicked] = useState(null);
+    const [assetInformation,setAssetInformation] = useState({});
 
     const [assetsEditBoxVisibility,setAssetsEditBoxVisibility] = useState(false);
+
     // Filtrar los datos con base en los filtros seleccionados
     const filteredAssets = useMemo(() => {
         return Assets.filter(asset => 
@@ -216,12 +219,30 @@ const AssetsPage = () => {
 
     const handleVisibilityAssetsOpen = useCallback((id)=> {
         setAssetsEditBoxVisibility(true);
-        console.log('asset id is',id);
-    },[])
+        setAssetIdClicked(id);
+        const assetFoundForId = filteredAssets.find(a=>a.id==id);
+        if (assetFoundForId) {
+            setAssetInformation(
+                {
+                enterprise: assetFoundForId.enterprise,
+                site: assetFoundForId.site,
+                area: assetFoundForId.area,
+                equipment: assetFoundForId.equipment,
+                device: assetFoundForId.device,
+                status: assetFoundForId.status,
+                createdat: assetFoundForId.createdat,
+                updatedat: assetFoundForId.updatedat,
+                lastmaintenance: assetFoundForId.lastmaintenance
+            }
+            )
+        };
+        console.log('asset id clicked',id);
+    },[]);
 
     const handleVisibilityAssetsClose = useCallback(()=>{
         setAssetsEditBoxVisibility(false);
-    },[])
+    },[]);
+
 
     const uniqueEnterprise = useMemo(() => [...new Set(Assets.map(asset => asset.enterprise.toUpperCase()))], []);
     const uniqueSite = useMemo(() => [...new Set(filteredAssets.map(asset => asset.site.toUpperCase()))], [filteredAssets]);
@@ -246,6 +267,10 @@ const AssetsPage = () => {
         setAreaSelected(e.target.value);
         setEquipmentSelected('');
     }, []);
+
+    const handleChangesOnEditAssets = (key,value) => {
+        console.log('CAMBIOS A EQUIPOS',key,value);
+    }
 
     return (
         <div className='assetsPage'>
@@ -333,10 +358,13 @@ const AssetsPage = () => {
 
             {/* CAJA EDICION Y MUESTRA DE ASSETS */}
 
-            <Overlay isVisible={assetsEditBoxVisibility} title='Equipos' closeButtonClicked={handleVisibilityAssetsClose}>
+            <Overlay isVisible={assetsEditBoxVisibility} title={assetInformation.device} closeButtonClicked={handleVisibilityAssetsClose}>
                     <div className='contentBoxInOverlay'>
                         <div className='assetsInfo'>
-                            <h1>HOLA</h1>
+                            <h2>Información</h2>
+                            <LabelsAssets
+                                information={assetInformation}
+                            />
                         </div>
                         <div className='partsxAssetsInfo'>
                             <h1>Holiwis</h1>
