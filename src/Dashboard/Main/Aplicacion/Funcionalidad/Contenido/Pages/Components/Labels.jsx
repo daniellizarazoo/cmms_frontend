@@ -1,11 +1,32 @@
 import { useState } from "react";
+import { useCallback } from "react";
+import DeleteAlert from "./DeleteAlert";
 
-const LabelsAssets = ({ information}) => {
+const LabelsAssets = ({ information,handleAssetToEdit}) => {
+
+    const [assetInfo,setAssetInfo] = useState(information);
+    const [toEdit,setToEdit] = useState(false);
+    const [isReadOnly,setIsReadOnly] = useState(true);
+    const [deleteAlertVisibility,setDeleteAlertVisibility] = useState(false);
 
     const handleChanges = (e,key) => {
-        console.log('TARGET VALUE',e.target.value);
-        console.log('KEY',key);
-    }
+        
+        setAssetInfo(prevState => ({
+            ...prevState,
+            [key] : e.target.value
+        }));
+    };
+
+    const handleAssetEdit = useCallback(()=>{
+        setIsReadOnly(false);
+        setToEdit(true);
+        if(toEdit){
+            handleAssetToEdit(assetInfo);
+            setIsReadOnly(true);
+            setToEdit(false);
+        }
+
+    },[toEdit,isReadOnly]);
 
     const labelStyle = {
         display: 'block',
@@ -28,7 +49,7 @@ const LabelsAssets = ({ information}) => {
     };
 
     const scrollContainerStyle = {
-        maxHeight: '400px', // Adjust based on desired height
+        maxHeight: '100%', // Adjust based on desired height
         overflowY: 'auto',
         border: '1px solid #ddd', // Optional: for better visual separation
         padding: '10px'
@@ -46,6 +67,12 @@ const LabelsAssets = ({ information}) => {
         }
     };
 
+    const eliminarButton = {
+        backgroundColor : '#f44336'
+    };
+
+    const edicionButton = toEdit ? {backgroundColor:'blue'} : {backgroundColor:'#4CAF50'}
+
     const keyToSpanish = key => {
         switch(key){
             case 'enterprise':
@@ -61,7 +88,7 @@ const LabelsAssets = ({ information}) => {
             case 'status':
                 return 'Estado';
             case 'createdat':
-                return 'Fecha de Creación';
+                return 'Fecha de Creación mm/dd/yyyy';
             case 'updatedat':
                 return 'Fecha de Actualización';
             case 'lastmaintenance':
@@ -85,27 +112,40 @@ const LabelsAssets = ({ information}) => {
                 ...(value ? statusStyles[value]:{})
             };
             return (
-                <select style={combinedStyle} value={value || ''} readOnl>
-                    <option value='operational'><p style={statusStyles}>Operacional</p></option>
+                <select style={combinedStyle} value={value || ''} disabled={isReadOnly} onChange={(e) =>handleChanges(e,key)}>
+                    <option value='operational'>Operacional</option>
                     <option value='under maintenance'>Bajo mantenimiento</option>
                     <option value='decomissioned'>Desmantelado</option>
                 </select>
             );
         } else if (key === 'createdat' || key === 'updatedat' || key === 'lastmaintenance') {
-            return (
-                <input
+            
+            if(key === 'lastmaintenance'){
+                return(<input
                     type="date"
                     value={formatDate(value) || ''}
                     onChange={(e)=>handleChanges(e,key)}
-                    
+                    readOnly={isReadOnly}
                     style={inputStyle}
-                />
-            );
+                />)
+            } else {
+                return (
+                    <input
+                        type="date"
+                        value={formatDate(value) || ''}
+                        onChange={(e)=>handleChanges(e,key)}
+                        readOnly
+                        style={inputStyle}
+                    />
+                );
+            }
+            
         } else {
             return (
                 <input
                     type="text"
                     value={value || ''}
+                    readOnly={isReadOnly}
                     onChange={(e)=>handleChanges(e,key)}
                     style={inputStyle}
                 />
@@ -113,15 +153,28 @@ const LabelsAssets = ({ information}) => {
         }
     }
 
+    
+
     return (
         <div style={scrollContainerStyle}>
-            {Object.entries(information).map(([key, value]) => (
+            <div>
+                <button style={edicionButton} onClick={handleAssetEdit}>
+                    {!toEdit ? 'Habilitar edicion' : 'Presione nuevamente para editar guardar cambios'}
+                </button>
+                <button style={eliminarButton} onClick={()=>setDeleteAlertVisibility(true)}>Eliminar equipo</button>
+            </div>
+            {Object.entries(assetInfo).map(([key, value]) => (
                 <div key={key} style={containerStyle}>
                     <label style={labelStyle}>{keyToSpanish(key)}</label>
                     {inputType(key,value)}
-
                 </div>
             ))}
+            {deleteAlertVisibility && 
+            <DeleteAlert
+                warningText='Al eliminar el equipo, se eliminarán las órdenes de trabajo asociadas a este y sus partes'
+                onCancel={() => setDeleteAlertVisibility(false)}
+            />
+            }
         </div>
     );
 };

@@ -5,6 +5,7 @@
     padding: 20px;
     height: 100%;
     box-sizing: border-box; /* Incluye padding y border en el ancho total */
+    
 }
 
 .sidebar-list {
@@ -31,12 +32,13 @@
     display: flex; /* Flexbox for aligning items */
     align-items: center; /* Center items vertically */
     font-family: 'Roboto', sans-serif; /* Font style for the link text */
-    font-size: 18px; /* Font size for the link text */
+    font-size: 1.2rem; /* Font size for the link text */
     font-weight: 500; /* Font weight for the link text */
+    font-family: 'Verdana';
 }
 
 .sidebar-icon {
-    width: 50px; /* Icon width */
-    height: 50px; /* Icon height */
+    width: 30px; /* Icon width */
+    height: 30px; /* Icon height */
     margin-right: 15px; /* Space between icon and text */
 }

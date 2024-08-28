@@ -15,12 +15,14 @@
 .editUser {
     position: relative;
     width: 90%; /* Adjust size as needed */
-    background-color: rgb(255, 255, 255); /* Light background with partial transparency */
+    height: 70%; /* Fixed height of 70%, change this to 60% or any other value as needed */
+    background-color: rgb(255, 255, 255); /* Light background */
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Shadow for emphasis */
     display: flex;
     flex-direction: column;
+    overflow-y: auto; /* Allows scrolling if content exceeds height */
 }
 
 .header {
