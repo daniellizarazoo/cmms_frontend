@@ -17,35 +17,30 @@ h1 {
     font-size: 2em; /* Increased font size for emphasis */
 }
 
-table {
+.user-table {
     width: 100%;
-    border-collapse: separate; /* Allows for individual cell styling */
-    border-spacing: 0 10px; /* Adds space between rows */
+    border-collapse: separate;
+    border-spacing: 0 10px;
+    color: white;
+}
+.user-table th, .user-table td {
+    padding: 12px;
+    text-align: left;
+    
+}
+.user-table th {
+    background-color: #374f7b;
+    color: #e0e6ed;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.user-table tr {
+    background-color: #374f7b;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.user-table tr:hover {
+    background-color: #344b7a;
 }
 
-th {
-    background-color: rgba(251, 251, 251, 0.945);
-    padding: 15px;
-    border: 1px solid #ccc; /* Light border for contrast */
-    border-radius: 5px;
-    text-align: center;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 1.1em; /* Slightly larger font for headers */
-}
-
-td {
-    padding: 15px;
-    text-align: center;
-    color: rgb(255, 255, 255);
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 15px;
-    background-color: rgba(33, 46, 73, 0.8); /* Slightly lighter background for cells */
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Subtle bottom border */
-}
-
-tr:nth-child(even) td {
-    background-color: rgba(81, 99, 139, 0.9); /* Darker background for alternating rows */
-}
 
 button {
     margin-right: 5px;
@@ -153,7 +148,7 @@ input[type="checkbox"]:disabled {
     background-color: #0056b3;
 }
 
-.overlay {
+.overlay2 {
     position: fixed;
     top: 0;
     left: 0;
@@ -164,17 +159,21 @@ input[type="checkbox"]:disabled {
     align-items: center;
     justify-content: center;
     z-index: 1000; /* Asegura que esté sobre todo */
+    padding: 20px; /* Añade padding para asegurarte de que la caja no toque los bordes de la pantalla */
 }
 
 .editUser {
     position: relative;
-    width: 400px; /* Ajusta el tamaño según sea necesario */
-    background-color: rgba(204, 200, 200, 0.916); /* Fondo blanco sin opacidad */
+    max-height: 40%;
+    width: 100%; /* Ancho completo */
+    max-width: 400px; /* Limita el ancho máximo a 400px */
+    background-color: rgba(204, 200, 200, 0.916); /* Fondo blanco */
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Sombra para destacarlo */
     display: flex;
     flex-direction: column;
+    overflow-x: hidden;
 }
 
 .header {
@@ -237,32 +236,32 @@ input[type="checkbox"]:disabled {
     z-index: 1000;
   }
   
-  .custom-alert {
-    background-color: white;
-    padding: 20px;
-    border-radius: 5px;
-    text-align: center;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  .custom-alert-buttons {
-    margin-top: 20px;
-  }
-  
-  .custom-alert-buttons button {
-    margin: 0 10px;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .custom-alert-buttons button:first-child {
-    background-color: #007bff;
-    color: white;
-  }
-  
-  .custom-alert-buttons button:last-child {
-    background-color: #ccc;
-    color: black;
-  }
+.custom-alert {
+background-color: white;
+padding: 20px;
+border-radius: 5px;
+text-align: center;
+box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.custom-alert-buttons {
+margin-top: 20px;
+}
+
+.custom-alert-buttons button {
+margin: 0 10px;
+padding: 10px 20px;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+}
+
+.custom-alert-buttons button:first-child {
+background-color: #007bff;
+color: white;
+}
+
+.custom-alert-buttons button:last-child {
+background-color: #ccc;
+color: black;
+}

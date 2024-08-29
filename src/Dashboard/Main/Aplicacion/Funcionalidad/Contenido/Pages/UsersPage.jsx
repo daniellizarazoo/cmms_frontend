@@ -270,7 +270,7 @@ const UserPage = () => {
             <div>
                 <button onClick={handleShowOpenNewUserBox}>Crear nuevo usuario</button>
             </div>
-            <table>
+            <table className='user-table'>
                 <thead>
                     <tr>
                         <th>Nombre</th>
@@ -327,7 +327,7 @@ const UserPage = () => {
             </span>
             {/* VISIBILIDAD CAJA EDICION USUARIO */}
             {visibilityEditUser && userToEdit && (
-                <div className='overlay'>
+                <div className='overlay2'>
                     <div className='editUser'>
                         <div className='header'>
                             <h2>Editar</h2>
@@ -383,7 +383,7 @@ const UserPage = () => {
             {/* VISIBILIDAD CAJA EDICION DE CONTRASEÑA */}
 
             {visibilityPasswordEdit &&
-                <div className='overlay'>
+                <div className='overlay2'>
                     <div className='editUser'>
                         <div className='header'>
                             <h2>Cambiar contraseña</h2>
@@ -428,7 +428,7 @@ const UserPage = () => {
             }
             
             {visbilityNewUserBox &&
-                <div className='overlay'>
+                <div className='overlay2'>
                     <div className='editUser'>
                         <div className='header'>
                             <h2>Crear nuevo usuario</h2>

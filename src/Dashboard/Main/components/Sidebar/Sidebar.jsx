@@ -1,15 +1,15 @@
 import './Sidebar.css';
-import usersIcon from './icons/usersIcon.svg';
-import assetIcon from './icons/assetIcon.svg';
-import workOrderIcon from './icons/workOrderIcon.svg';
-import reportIcon from './icons/reportIcon.svg';
-import inventoryIcon from './icons/inventoryIcon.svg';
+// import usersIcon from './icons/usersIcon.svg';
+// import assetIcon from './icons/assetIcon.svg';
+// import workOrderIcon from './icons/workOrderIcon.svg';
+// import reportIcon from './icons/reportIcon.svg';
+// import inventoryIcon from './icons/inventoryIcon.svg';
 
 const adminMenu = () => (
     <>
         <li className="sidebar-item">
             <a href="/admin" className="sidebar-link">
-                <img src={usersIcon} alt="Users Icon" className="sidebar-icon" />
+                {/* <img src={usersIcon} alt="Users Icon" className="sidebar-icon" /> */}
                 Usuarios
             </a>
         </li>
@@ -21,7 +21,7 @@ const inventoryManagerMenu = () => (
     <>
         <li className="sidebar-item">
             <a href="/inventario" className="sidebar-link">
-                <img src={inventoryIcon} alt="Inventory Icon" className="sidebar-icon" />
+                {/* <img src={inventoryIcon} alt="Inventory Icon" className="sidebar-icon" /> */}
                 Inventario
             </a>
         </li>
@@ -32,7 +32,7 @@ const maintenanceManagerMenu = () => (
     <>
         <li className="sidebar-item">
             <a href="/equipos" className="sidebar-link">
-                <img src={assetIcon} alt="Asset Icon" className="sidebar-icon" />
+                {/* <img src={assetIcon} alt="Asset Icon" className="sidebar-icon" /> */}
                 Equipos
             </a>
         </li>
@@ -46,7 +46,7 @@ const reliabilityEngineerMenu = () => (
     <>
         <li className="sidebar-item">
             <a href="/reportes" className="sidebar-link">
-                <img src={reportIcon} alt="Reports Icon" className="sidebar-icon" />
+                {/* <img src={reportIcon} alt="Reports Icon" className="sidebar-icon" /> */}
                 Reportes
             </a>
         </li>
@@ -57,19 +57,19 @@ const technicianMenu = () => (
     <>
         <li className="sidebar-item">
             <a href="/mantenimientopredictivo" className="sidebar-link">
-                <img src={assetIcon} alt="Asset Icon" className="sidebar-icon" />
+                {/* <img src={assetIcon} alt="Asset Icon" className="sidebar-icon" /> */}
                 Mantenimiento predictivo
             </a>
         </li>
         <li className="sidebar-item">
             <a href="/ordentrabajo" className="sidebar-link">
-                <img src={workOrderIcon} alt="Asset Icon" className="sidebar-icon" />
+                {/* <img src={workOrderIcon} alt="Asset Icon" className="sidebar-icon" /> */}
                 Orden de trabajo
             </a>
         </li>
         <li className="sidebar-item">
             <a href="/reportemantenimiento" className="sidebar-link">
-                <img src={reportIcon} alt="Report Icon" className="sidebar-icon" />
+                {/* <img src={reportIcon} alt="Report Icon" className="sidebar-icon" /> */}
                 Reporte mantenimiento
             </a>
         </li>

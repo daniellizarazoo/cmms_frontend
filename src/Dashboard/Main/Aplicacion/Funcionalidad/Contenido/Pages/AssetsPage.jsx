@@ -284,7 +284,7 @@ const AssetsPage = () => {
     // Memoize the handleLeftClickArrow function
     const handleLeftClickArrow = useCallback(() => {
         setPageSlice(prevState => Math.max(prevState - 10, 0));
-    }, []);
+    }, [numberOfPages]);
 
     // Memoize the handleRightClickArrow function
     const handleRightClickArrow = useCallback(() => {
@@ -435,12 +435,14 @@ const handleLabelClickedOnDonut = (data) =>{
 }
 //------------------------------------------------------
 return (
+    <>
+        <h1 className='titulo'>Equipos</h1>
         <div className='assetsPage'>
             <h1>Información general de equipos</h1>
             <div className='donutsBox'>
                 <DonutChart data={dataForDonutFunc} labels={['Operacional','Mantenimiento','Desmantelado']} colors={['#27ae60', '#f1c40f', '#e74c3c']} onClick={handleLabelClickedOnDonut}/>
             </div>
-            <h1>Equipos</h1>
+            
             <button className='buttonNewAsset' onClick={()=>setNewAssetBoxVisibility(true)}>Crear nuevo equipo</button>
             <div className='filterBoxes'>
                 <div>
@@ -516,7 +518,7 @@ return (
 
             {/* Mostrar los datos filtrados */}
             <div>
-                <h2>Equipos encontrados</h2>
+                <h2>Equipos encontrados:</h2>
                 <ul>
                     {assetsFilteredAndSliced.map(asset => (
                         <>
@@ -629,6 +631,7 @@ return (
             />
 
         </div>
+        </>
     );
 };
 

@@ -5,7 +5,8 @@
     margin: 2%;
     padding: 2%;
     border-radius: 8px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    /* font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
     color: white;
     font-size: 1rem;
 }
@@ -16,15 +17,24 @@
     text-align: center;
     font-size: 2em;
     margin-bottom: 15px;
-    color:rgb(255, 255, 255)
+    color:rgb(255, 255, 255);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.titulo{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    margin-left: 2%;
+    text-align: left;
 }
 
 .assetsPage h2{
-    color: yellow;
+    color: rgb(255, 255, 255);
 }
 
 .assetsPage h3{
-    color: yellow;
+    color: rgb(255, 255, 255);
 }
 
 .filterBoxes {
@@ -83,8 +93,9 @@ li {
     border-radius: 6px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     cursor: pointer;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 li:hover {
@@ -104,7 +115,7 @@ li:hover {
 
 .assetsLegend h3 {
     margin: 0; /* Elimina margen alrededor del título */
-    color: yellow; /* Color del texto del título *//* Espacio entre el título y el texto */
+    color: rgb(255, 255, 255); /* Color del texto del título *//* Espacio entre el título y el texto */
 }
 
 .assetsLegend p {
