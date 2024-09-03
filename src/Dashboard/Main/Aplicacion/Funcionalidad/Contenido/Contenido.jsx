@@ -6,7 +6,7 @@ import PredictiveMaintenance from './Pages/PredictiveMaintenance';
 const Contenido = () => {
     return (
         <div className="contenido">
-            <PredictiveMaintenance/>
+            <AssetsPage/>
         </div>
     )
 };

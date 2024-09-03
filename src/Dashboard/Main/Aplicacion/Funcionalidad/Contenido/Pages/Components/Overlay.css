@@ -1,5 +1,5 @@
 /* Overlay.css */
-.overlay {
+.overlay1 {
     position: fixed;
     top: 0;
     left: 0;
@@ -12,7 +12,7 @@
     z-index: 1000; /* High z-index to ensure it is on top */
 }
 
-.editUser {
+.editUser1 {
     position: relative;
     width: 90%; /* Adjust size as needed */
     height: 70%; /* Fixed height of 70%, change this to 60% or any other value as needed */
@@ -25,21 +25,21 @@
     overflow-y: auto; /* Allows scrolling if content exceeds height */
 }
 
-.header {
+.header1 {
     display: flex;
     justify-content: space-between; /* Ensures title and button are on opposite sides */
     align-items: center; /* Vertically centers the items in the header */
     padding-bottom: 10px; /* Space between header and content below */
 }
 
-.header h2 {
+.header1 h2 {
     margin: 0; /* Removes default margin to align properly */
     text-align: center; /* Centers text within the header */
     flex: 1; /* Allows title to take up available space */
     color: black;
 }
 
-.closeButton {
+.closeButton1 {
     background: none;
     border: none;
     font-size: 16px;

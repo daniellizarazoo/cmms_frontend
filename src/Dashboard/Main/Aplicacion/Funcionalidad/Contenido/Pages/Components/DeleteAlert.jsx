@@ -24,7 +24,7 @@ const overlayStyle = {
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    zIndex: 1000,
+    zIndex: 1002, // THIS HAS BEEN CHANGED FROM 1000 TO 1002 TO see how it works within Predictive maintenance
     color: 'black'
 };
 

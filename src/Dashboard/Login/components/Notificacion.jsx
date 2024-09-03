@@ -8,7 +8,7 @@ const Notification = ({isError=false,message=null}) => {
                 <label>{message}</label>
             </div>
         )
-    } else if (message!=null){
+    } else if (message!=null && message!=''){
         return(
             <div className='notificacionCajaSuccess'>
                 <label>{message}</label>
@@ -19,3 +19,4 @@ const Notification = ({isError=false,message=null}) => {
 };
 
 export default Notification;
+

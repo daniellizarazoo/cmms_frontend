@@ -18,6 +18,7 @@
     width: 100%;
     border-collapse: separate;
     border-spacing: 0 10px;
+    color: white;
 }
 .pm-table th, .pm-table td {
     padding: 12px;
@@ -26,7 +27,13 @@
 .pm-table th {
     background-color: #2c4166;
     color: #e0e6ed;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+
+.pm-table td {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
 .pm-table tr {
     background-color: #2c4166;
 }
@@ -34,7 +41,10 @@
     background-color: #344b7a;
 }
 
-
+.pm-table .editar {
+    background-color: #FFC107;
+    color: black;
+}
 
 .status-indicator {
     width: 10px;
@@ -46,12 +56,150 @@
 .status-scheduled {
     background-color: #3498db;
 }
-.status-in-progress {
+.status-vence-hoy {
     background-color: #f1c40f;
 }
-.status-completed {
+.status-Próximo {
     background-color: #27ae60;
 }
-.status-overdue {
+.status-Vencido {
     background-color: #e74c3c;
+}
+
+.overlay-content-p{
+    padding: 2%;
+    background-color: #e1e5e3;
+    text-align: justify;
+    border-radius: 5px;
+}
+
+/* Formulario de edicion */
+
+.overlayStyle {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1001;
+}
+
+.innerBoxStyle {
+    position: relative; /* This is important for the absolute positioning of closeButtonStyle */
+    width: 36%;
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    max-width: 70%;
+    color: black; /* Changed to ensure readability if background is white */
+}
+
+.headerInner {
+    display: flex;
+    align-items: center; /* Vertically centers items */
+    padding-bottom: 5px; /* Optional: adds space below header */
+    border-bottom: 1px solid #ddd; /* Optional: adds a border below header */
+}
+
+.headerInner h2 {
+    margin: 0;
+    flex: 1; /* This makes the h2 take up the remaining space */
+    text-align: center; /* Centers text within the flex item */
+}
+
+.headerInner button {
+    background: transparent;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: red; /* Customize as needed */
+}
+
+.actionsBox {
+    margin-top: 1%;
+    flex: 1;
+    align-items: left;
+}
+
+.actionsBox button{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 0.9rem;
+}
+
+.actionsBox-eliminar{
+    background-color: rgb(247, 70, 70);
+}
+
+.actionsBox-eliminar:hover{
+    background-color: rgb(255, 0, 0);
+}
+
+.formBoxStyle {
+    margin-top: 1%;
+    padding: 2%;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    
+}
+
+.formBoxStyle-labels{
+    display: flex;
+    flex-direction: column;
+    gap:5px;
+    margin-bottom: 10px;
+}
+
+.formBoxStyle-labels label{
+    font-family: 'Verdana';
+    font-weight: 800
+}
+
+.formBoxStyle-labels input{
+    font-family: 'Times New Roman';
+    font-size: 1.3rem;
+}
+
+.formBoxStyle-labels input,
+.formBoxStyle-labels textarea {
+    font-family: 'Times New Roman';
+    font-size: 1.3rem;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.formBoxStyle-labels textarea {
+    min-height: 100px; /* Minimum height of the textarea */
+    max-height: 200px; /* Maximum height of the textarea */
+    resize: vertical; /* Allows user to resize textarea vertically */
+    width: 100%; /* Ensures textarea takes up the full width of its container */
+    padding: 8px; /* Padding inside the textarea for better readability */
+    border-radius: 4px; /* Rounded corners */
+    border: 1px solid #ccc; /* Border color */
+    box-sizing: border-box; /* Ensures padding and border are included in the element's total width and height */
+    font-family: 'Times New Roman'; /* Font family */
+    font-size: 1.3rem; /* Font size */
+    text-align: justify;
+    overflow: auto;
+}
+
+.formBoxStyle button {
+    width: 100%; /* Make the button take the full width of its container */
+    color: white; /* Text color */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Optional: Rounded corners */
+    font-size: 1.2rem; /* Font size */
+    font-family: 'Verdana', sans-serif; /* Font family */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    box-sizing: border-box; /* Ensure padding/border are included in width */
 }
