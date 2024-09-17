@@ -158,7 +158,7 @@ const PredictiveMaintenance = () => {
             </table>
             {notesOverlayVisibility && 
             <Overlay isVisible={true} title='Notas' closeButtonClicked={()=>setNotesOverlayVisibility(false)}>
-                <p className='overlay-content-p'>{noteInfoToEdit.notes}</p>
+                <p className='overlay-content-p'>{slicedDataToShow.find(t=>t.id===noteIdToEdit).notes}</p>
             </Overlay>
             }
             {editNotesOverlayVisibility &&

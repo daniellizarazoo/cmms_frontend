@@ -5,7 +5,7 @@ import Contenido from './Contenido/Contenido';
 const Funcionalidad = () => (
     <>
         <Sidebar roleid={1}/>
-        <Contenido/>
+        <Contenido roleid={1}/>
     </>
 );
 

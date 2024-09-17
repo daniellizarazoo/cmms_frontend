@@ -26,6 +26,7 @@
 }
 
 .header1 {
+    
     display: flex;
     justify-content: space-between; /* Ensures title and button are on opposite sides */
     align-items: center; /* Vertically centers the items in the header */

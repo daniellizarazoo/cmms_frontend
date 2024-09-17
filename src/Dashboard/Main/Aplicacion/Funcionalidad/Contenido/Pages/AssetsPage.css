@@ -202,7 +202,7 @@ li.decomissioned:hover {
 }
 
 .addPartButton {
-    background-color: #4CAF50; /* Green */
+    background-color: #2B84BA;
     color: white;
     padding: 10px 20px;
     border: none;
@@ -212,7 +212,7 @@ li.decomissioned:hover {
 }
 
 .addPartButton:hover {
-    background-color: #45a049;
+    background-color: rgb(14, 52, 190);
 }
 
 .partsList {

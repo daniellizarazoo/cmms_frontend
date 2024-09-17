@@ -2,12 +2,22 @@ import './Contenido.css'
 import UserPage from './Pages/UsersPage';
 import AssetsPage from './Pages/AssetsPage';
 import PredictiveMaintenance from './Pages/PredictiveMaintenance';
+import WorkOrder from './Pages/workOrder';
 
-const Contenido = () => {
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+
+const Contenido = ({roleid}) => {
     return (
-        <div className="contenido">
-            <AssetsPage/>
-        </div>
+        <Router>
+            <div className='contenido'>
+                <Routes>
+                    <Route path='/admin' element={<UserPage/>}/>
+                    <Route path='/equipos' element={<AssetsPage/>}/>
+                    <Route path='/mantenimientopredictivo' element={<PredictiveMaintenance/>}/>
+                    <Route path='/ordentrabajo' element={<WorkOrder roleid={roleid}/>}/>
+                </Routes>
+            </div>
+        </Router>
     )
 };
 

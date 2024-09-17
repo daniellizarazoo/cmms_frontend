@@ -79,7 +79,8 @@ const Formulario2 = ({ isVisible, title, buttonText, labels, textHolder, inputTy
     };
 
     const buttonStyle = {
-        width: '50%',              // Set the button width
+        width: '50%',
+        marginTop:'10px'  ,          // Set the button width
         margin: '0 auto',          // Center the button horizontally
         display: 'flex',           // Flexbox to center the text inside the button
         justifyContent: 'center',  // Center the content horizontally

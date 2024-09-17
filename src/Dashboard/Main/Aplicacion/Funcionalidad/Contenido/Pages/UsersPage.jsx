@@ -411,7 +411,7 @@ const UserPage = () => {
                                     onChange={(e) => setpwdRepeated(e.target.value)}
                                 />
                             </div>
-                            <button type='submit'>Cambiar contraseña</button>
+                            <button type='submit' className='formGroup-change-pwd-button'>Cambiar contraseña</button>
                         </form>
                     </div>
                 </div>
@@ -426,7 +426,7 @@ const UserPage = () => {
                 onCancel={handleCloseDeleteBox}
             />
             }
-            
+            {/* VISIBILIDAD CAJA CREACION DE NUEVO USUARIO */}
             {visbilityNewUserBox &&
                 <div className='overlay2'>
                     <div className='editUser'>
@@ -465,7 +465,7 @@ const UserPage = () => {
                                     <option value={4}>Ingeniero de confiabilidad</option>
                                 </select>
                             </div>
-                            <button type='submit'>Crear</button>
+                            <button type='submit' className='editUser-create-button'>Crear</button>
                         </form>
                     </div>
                 </div>

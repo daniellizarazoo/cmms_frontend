@@ -71,7 +71,7 @@ const LabelsAssets = ({ information,handleAssetToEdit}) => {
         backgroundColor : '#f44336'
     };
 
-    const edicionButton = toEdit ? {backgroundColor:'blue'} : {backgroundColor:'#4CAF50'}
+    const edicionButton = toEdit ? {backgroundColor:'blue'} : {backgroundColor:'#2B84BA'}
 
     const keyToSpanish = key => {
         switch(key){
@@ -159,7 +159,7 @@ const LabelsAssets = ({ information,handleAssetToEdit}) => {
         <div style={scrollContainerStyle}>
             <div>
                 <button style={edicionButton} onClick={handleAssetEdit}>
-                    {!toEdit ? 'Habilitar edicion' : 'Presione nuevamente para editar guardar cambios'}
+                    {!toEdit ? 'Habilitar edicion' : 'Presione nuevamente para guardar cambios'}
                 </button>
                 <button style={eliminarButton} onClick={()=>setDeleteAlertVisibility(true)}>Eliminar equipo</button>
             </div>

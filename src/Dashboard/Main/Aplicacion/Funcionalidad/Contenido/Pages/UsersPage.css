@@ -54,11 +54,11 @@ button {
 }
 
 button.eliminar{
-    background-color: red;
+    background-color: rgb(213, 42, 42);
 }
 
 button.eliminar:hover{
-    background-color: rgb(225, 153, 20);
+    background-color: rgb(255, 0, 0);
 }
 
 button:hover {
@@ -164,7 +164,7 @@ input[type="checkbox"]:disabled {
 
 .editUser {
     position: relative;
-    max-height: 40%;
+    max-height: 50%;
     width: 100%; /* Ancho completo */
     max-width: 400px; /* Limita el ancho máximo a 400px */
     background-color: rgba(204, 200, 200, 0.916); /* Fondo blanco */
@@ -174,6 +174,12 @@ input[type="checkbox"]:disabled {
     display: flex;
     flex-direction: column;
     overflow-x: hidden;
+    font-family: 'Lucida Sans';
+}
+.editUser-create-button {
+    width: 100%;
+    font-family: 'Verdana';
+    font-size: 1rem;
 }
 
 .header {
@@ -204,6 +210,11 @@ input[type="checkbox"]:disabled {
 .formGroup {
     display: flex;
     align-items: center;
+    margin-bottom: 5px;
+}
+
+.formGroup-change-pwd-button{
+    width: 100%;
 }
 
 .formGroup label {
@@ -238,14 +249,20 @@ input[type="checkbox"]:disabled {
   
 .custom-alert {
 background-color: white;
+width: 30%;
 padding: 20px;
 border-radius: 5px;
-text-align: center;
+font-family: 'Verdana';
 box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.custom-alert p{
+    text-align: justify;
 }
 
 .custom-alert-buttons {
 margin-top: 20px;
+text-align: center;
 }
 
 .custom-alert-buttons button {
@@ -257,11 +274,11 @@ cursor: pointer;
 }
 
 .custom-alert-buttons button:first-child {
-background-color: #007bff;
+background-color: #ff4800;
 color: white;
 }
 
 .custom-alert-buttons button:last-child {
-background-color: #ccc;
-color: black;
+background-color: #8d8e94;
+color: white;
 }

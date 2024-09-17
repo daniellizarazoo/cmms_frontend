@@ -35,6 +35,7 @@ const alertBoxStyle = {
     textAlign: 'center',
     maxWidth: '400px',
     width: '80%',
+    fontSize: '1.2rem'
 };
 
 const buttonContainerStyle = {
