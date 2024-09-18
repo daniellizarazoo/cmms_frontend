@@ -1,16 +1,17 @@
 {
-  "homepage":"http://daniellizarazoo.github.io/cmms_frontend",
+  "homepage":"https://daniellizarazoo.github.io/cmms_frontend",
   "name": "cmms_frontend",
-  "private": true,
+  "private": false,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "start":"vite",
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "axios": "^1.7.3",

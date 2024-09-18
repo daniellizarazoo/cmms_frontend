@@ -28,23 +28,41 @@
 
 .workOrder h3 {
     margin-top: 0;
-    color: #4a90e2;
+    color: #99ebf9;
 }
 
 .work-order-status-completed {
-background-color: #28a745; /* Green */
+background-color: #28a746ab; /* Green */
 padding: 5px;
 }
 
 .work-order-status-in-progress {
-background-color: #ffc107; /* Amber */
+background-color: #ffc107ab; /* Amber */
 padding: 5px;
 }
 
 .work-order-status-open {
-background-color: #dc3545; /* Red */
+background-color: #dc3546ab; /* Red */
 padding: 5px;
 }
 
+.work-order-search{
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 1.2rem;
+    background-color: #2C4166;
+    color: white;
+    border: none;
+    margin-bottom: 10px;
+}
 
+.work-order-search::placeholder {
+    color: #8595B4; /* Change this to the desired color */
+}
 
+.work-order-filter-box {
+    display: flex;
+    gap: 7px;
+}

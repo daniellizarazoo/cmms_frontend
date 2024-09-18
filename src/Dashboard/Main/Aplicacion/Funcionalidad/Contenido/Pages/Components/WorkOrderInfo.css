@@ -1,28 +1,18 @@
 /* Style for the info details */
 .infoDetails {
-    font-family: 'Lucida Sans', Arial, sans-serif;
-    color: #333;
-}
-
-.infoDetails p {
-    font-size: 17px;
-    margin-bottom: 10px;
+    font-family: 'Verdana';
+    color: #000000;
+    background-color: #F9F9F9;
+    border-radius: 5px;
+    border: 2px solid#838b90;
+    font-size: 1.2rem;
+    margin-top: 5px;
+    padding: 10px;
 }
 
 .infoDetails p strong {
     color: #000;
-}
-
-/* Add a bit of padding for each field */
-.infoDetails p {
-    padding: 5px 0;
-}
-
-/* Optional: Adding subtle borders or background to make it more distinct */
-.infoDetails p:nth-child(odd) {
-    background-color: #f9f9f9;
-    padding: 10px 0;
-    border-radius: 5px;
+    font-size: 1.2rem;
 }
 
 .buttons-work-order {
@@ -52,17 +42,30 @@
 }
 
 .infoDetails input[type="text"]{
-    width: 95%;
-    font-size: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 1.1rem;
+    font-family: 'Lucida Sans';
+    margin-top: 6px;
+}
+
+.infoDetails textarea{
+    min-width: 100%;
+    box-sizing: border-box;
+    margin-top: 6px;
+    font-family: 'Lucida Sans';
+    font-weight: normal;
+    font-size: 1.1rem;
 }
 
 .infoDetails input[type="date"],
-.infoDetails select,
-.infoDetails textarea {
+.infoDetails select {
     width: 100%;
-    padding: 5px;
-    margin-top: 5px; /* Enabled margin for spacing */
+    padding: 3px;
+    margin-top: 6px; /* Enabled margin for spacing */
     border: 1px solid #ccc;
     border-radius: 4px;
-    font-family: 'Verdana', sans-serif;
+    font-family: 'Lucida Sans';
+    font-size: 1.1rem;
+    box-sizing: border-box;
 }

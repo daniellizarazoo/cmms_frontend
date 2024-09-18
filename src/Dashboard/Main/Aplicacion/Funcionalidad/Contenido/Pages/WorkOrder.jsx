@@ -1,7 +1,7 @@
 import './WorkOrder.css';
 import NewWorkOrder from './Components/NewWorkOrder';
 import WorkOrderInfo from './Components/WorkOrderInfo';
-import { useState } from 'react';
+import { useMemo, useState } from 'react';
 
 const workOrderData = [
     {
@@ -85,7 +85,7 @@ const workOrderData = [
     {
         id:6,
         title: 'TI101 - Cambio de rodillos',
-        description: 'Se presentan fallas en arandelas de rodillos lo que ocasiona perdidas de potencia',
+        description: 'Se presentan fallas en arandelas de rodillos lo que ocasiona perdidas de potencia en l peridas sdajkdsa sajdkas asfjkasf asfa sfjaksf asfa sjkf asfjkas faksf asjkf asfajf sf sakjf ajkf askjf asfjksf asjkf afjka fakjfs a',
         status: 'open',
         priority:'high',
         createdat:'2024-08-02 17:25:29.614991',
@@ -133,6 +133,45 @@ const workOrderData = [
         createdby:1,
         assetid:7,
         devicepartid:null
+    },
+    {
+        id:10,
+        title: 'PT100 - Cambio de rodillos',
+        description: 'Se presentan fallas en arandelas de rodillos lo que ocasiona perdidas de potencia',
+        status: 'open',
+        priority:'high',
+        createdat:'2024-08-02 17:25:29.614991',
+        updatedat:'2024-08-02 17:25:29.614991',
+        duedate: '2024-08-25',
+        createdby:1,
+        assetid:7,
+        devicepartid:null
+    },
+    {
+        id:11,
+        title: 'PT100 - Cambio de rodillos',
+        description: 'Se presentan fallas en arandelas de rodillos lo que ocasiona perdidas de potencia',
+        status: 'open',
+        priority:'high',
+        createdat:'2024-08-02 17:25:29.614991',
+        updatedat:'2024-08-02 17:25:29.614991',
+        duedate: '2024-08-25',
+        createdby:1,
+        assetid:7,
+        devicepartid:null
+    },
+    {
+        id:12,
+        title: 'PT100 - Cambio de balineras',
+        description: 'Se presentan fallas en arandelas de rodillos lo que ocasiona perdidas de potencia',
+        status: 'open',
+        priority:'high',
+        createdat:'2024-08-02 17:25:29.614991',
+        updatedat:'2024-08-02 17:25:29.614991',
+        duedate: '2024-08-25',
+        createdby:1,
+        assetid:7,
+        devicepartid:null
     }
 ];
 
@@ -142,13 +181,48 @@ const WorkOrder = ({roleid}) => {
     const [workOrdersData,setWorkOrderData]= useState(workOrderData);
     const [newWorkOrderBoxVisibility,setNewWorkOrderBoxVisibility] = useState(false);
     const [workOrderId,setWorkOrderId] = useState('');
+    const [workOrderToSearch,setWorkOrderToSearch] = useState('');
+    const [statusToFilter,setStatusToFilter] = useState('');
+    const [priorityToFilter,setPriorityToFilter] = useState('');
+
+    const filteredData = useMemo(()=>{
+        return workOrdersData.filter(workOrder =>
+            (workOrderToSearch === '' || workOrder.title.toLowerCase().includes(workOrderToSearch.toLowerCase())) &&
+            (statusToFilter === '' || workOrder.status.toLowerCase().includes(statusToFilter.toLowerCase())) &&
+            (priorityToFilter === '' || workOrder.priority.toLowerCase().includes(priorityToFilter.toLowerCase()))
+        )
+    },[workOrderToSearch,statusToFilter,priorityToFilter]);
+
 return(
 <>
     <h1 style={{fontFamily:'Lucida Sans',textAlign:'left',margin:'2%'}}>Orden de trabajo</h1>
     <div className='mainBoxWorkOrder'>
+        <div className='work-order-search-and-filter'>
+            <input 
+            className='work-order-search' 
+            type="text" 
+            placeholder='Buscar orden de trabajo por nombre de equipo'
+            value={workOrderToSearch}
+            onChange={(e)=>setWorkOrderToSearch(e.target.value)}
+            />
+            <div className='work-order-filter-box'>
+                <select value={priorityToFilter} onChange={(e)=>setPriorityToFilter(e.target.value)}>
+                    <option value=''>Seleccionar prioridad</option>
+                    <option value='high'>Alta</option>
+                    <option value='medium'>Media</option>
+                    <option value='low'>Baja</option>
+                </select>
+                <select value={statusToFilter} onChange={(e)=>setStatusToFilter(e.target.value)}>
+                    <option value=''>Seleccionar estado</option>
+                    <option value='open'>Abierta</option>
+                    <option value='in progress'>En progreso</option>
+                    <option value='completed'>Completada</option>
+                </select>
+            </div>
+        </div>
         <div className='boxWithData'>
             {
-                workOrdersData.map(d=>
+                filteredData.map(d=>
                         <div className='workOrder' key={d.id} onClick={()=>{
                             setNewWorkOrderBoxVisibility(true);
                             setWorkOrderId(d.id);
@@ -173,7 +247,7 @@ return(
     <WorkOrderInfo
     fromWorkOrder ={true}
     workOrderId={workOrderId}
-    infoToShow = {workOrdersData.find(w=>w.id===workOrderId)}
+    infoToShow = {filteredData.find(w=>w.id===workOrderId)}
     handleClose={()=>setNewWorkOrderBoxVisibility(false)}
     />
     }
