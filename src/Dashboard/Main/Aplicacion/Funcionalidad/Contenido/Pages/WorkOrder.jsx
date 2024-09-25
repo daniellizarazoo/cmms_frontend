@@ -1,5 +1,5 @@
 import './WorkOrder.css';
-import NewWorkOrder from './Components/NewWorkOrder';
+import SearchEngine from './Components/SearchEngine';
 import WorkOrderInfo from './Components/WorkOrderInfo';
 import { useMemo, useState } from 'react';
 
@@ -198,12 +198,9 @@ return(
     <h1 style={{fontFamily:'Lucida Sans',textAlign:'left',margin:'2%'}}>Orden de trabajo</h1>
     <div className='mainBoxWorkOrder'>
         <div className='work-order-search-and-filter'>
-            <input 
-            className='work-order-search' 
-            type="text" 
-            placeholder='Buscar orden de trabajo por nombre de equipo'
-            value={workOrderToSearch}
-            onChange={(e)=>setWorkOrderToSearch(e.target.value)}
+            <SearchEngine
+                placeHolder={'Buscar orden de trabajo por nombre de equipo'}
+                onChange={setWorkOrderToSearch}
             />
             <div className='work-order-filter-box'>
                 <select value={priorityToFilter} onChange={(e)=>setPriorityToFilter(e.target.value)}>

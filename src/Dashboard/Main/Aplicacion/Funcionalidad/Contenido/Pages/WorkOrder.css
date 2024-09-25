@@ -46,7 +46,7 @@ background-color: #dc3546ab; /* Red */
 padding: 5px;
 }
 
-.work-order-search{
+/* .work-order-search{
     width: 100%;
     padding: 10px;
     border-radius: 5px;
@@ -56,7 +56,7 @@ padding: 5px;
     color: white;
     border: none;
     margin-bottom: 10px;
-}
+} */
 
 .work-order-search::placeholder {
     color: #8595B4; /* Change this to the desired color */

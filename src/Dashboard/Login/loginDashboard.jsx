@@ -12,12 +12,11 @@ const LoginDashboard = () => {
         <div className='cajaFondo'>
             <h1 className='tituloPagina'>TECNODM</h1>
             <div className='loginDashboardMainBox'>
-                <Advice/>
-                <LoginForm/>
-                <Notification error={notificationMessage}/>
+                    <Advice/>
+                    <LoginForm/>
+                    <Notification error={notificationMessage}/>
             </div>
         </div>
-        
     );
 };
 

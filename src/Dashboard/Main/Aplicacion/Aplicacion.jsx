@@ -3,7 +3,8 @@
 // La app estara compuesta de Sidebar y Funcionalidades
 import './Aplicacion.css';
 import Navbar from "../components/Navbar/Navbar"
-import Funcionalidad from "./Funcionalidad/Funcionalidad";
+import Sidebar from '../components/Sidebar/Sidebar';
+import Contenido from './Funcionalidad/Contenido/Contenido';
 
 const Aplicacion = () => (
     <div className='aplicacion'>
@@ -11,9 +12,9 @@ const Aplicacion = () => (
             <Navbar/>
         </div>
         <div className='funcionalidad'>
-            <Funcionalidad/>
+            <Sidebar roleid={1}/>
+            <Contenido roleid={1}/>
         </div>
-        
     </div>
 );
 

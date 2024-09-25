@@ -1,13 +1,13 @@
-import { useState } from "react";
+import { useState,useCallback } from "react";
 
 const SearchEngine = ({ placeHolder, onChange }) => {
     const [searchText, setSearchText] = useState('');
 
-    const onChangeText = (e) => {
+    const onChangeText = useCallback((e) => {
         const newValue = e.target.value;
         setSearchText(newValue);
         onChange(newValue);
-    }
+    }, [onChange]);
 
     return (
         <div>

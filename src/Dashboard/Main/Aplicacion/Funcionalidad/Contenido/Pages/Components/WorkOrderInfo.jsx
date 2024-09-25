@@ -1,10 +1,13 @@
+/* eslint-disable react/prop-types */
 import { useState } from 'react';
 import './WorkOrderInfo.css';
 import DeleteAlert from './DeleteAlert';
+import NewMaintenanceReport from './NewMaintenanceReport';
 
 const WorkOrderInfo = ({roleId=1,workOrderId=null,fromWorkOrder=false,handleClose,infoToShow={}}) => {
     const [infoToShowWork,setInfoToShow] = useState(infoToShow);
     const [deleteAlertVisibility,setDeleteAlertVisibility] = useState(false);
+    const [maintenanceReportVisibility,setMaintenanceReportVisibility] = useState(false);
 
     const handleEditButtonClicked = () => {
         console.log('infotoshow original',infoToShow);
@@ -18,14 +21,18 @@ const WorkOrderInfo = ({roleId=1,workOrderId=null,fromWorkOrder=false,handleClos
     const workToReturn = () => {
         if(roleId===5){
             return (
-                <div className='overlayStyle'>
-                    <div className='innerBoxStyle'>
+                <div className='overlayStyle' onClick={handleClose}>
+                    <div className='innerBoxStyle' onClick={(e)=>e.stopPropagation()}>
                         <div className='headerInner'>
                             <h2>Información de orden de trabajo</h2>
                             <button onClick={handleClose}>X</button>
                         </div>
                     <div className='buttons-work-order'>
-                        <button className='buttons-work-order-completado'>Marcar como completado</button>
+                        <button 
+                        className='buttons-work-order-completado'
+                        onClick={()=>setMaintenanceReportVisibility(true)}>
+                            Marcar como completado
+                        </button>
                     </div>
                     <div className='infoDetails'>
                         <p><strong>Título: </strong>{infoToShowWork.title}</p>
@@ -41,8 +48,8 @@ const WorkOrderInfo = ({roleId=1,workOrderId=null,fromWorkOrder=false,handleClos
             // Si roleid es administrador o jefe de mantenimiento
         } else if(roleId===1 || roleId===3){
             return (
-                <div className='overlayStyle'>
-                    <div className='innerBoxStyle'>
+                <div className='overlayStyle' onClick={handleClose}>
+                    <div className='innerBoxStyle' onClick={(e)=>e.stopPropagation()}>
                         <div className='headerInner'>
                             <h2>Información de orden de trabajo</h2>
                             <button onClick={handleClose}>X</button>
@@ -55,7 +62,8 @@ const WorkOrderInfo = ({roleId=1,workOrderId=null,fromWorkOrder=false,handleClos
                             Editar
                         </button>
                         <button 
-                        className='buttons-work-order-completado'>
+                        className='buttons-work-order-completado'
+                        onClick={()=>setMaintenanceReportVisibility(true)}>
                             Marcar como completado
                         </button>
                         <button 
@@ -153,6 +161,11 @@ const WorkOrderInfo = ({roleId=1,workOrderId=null,fromWorkOrder=false,handleClos
             warningText={'¿Realmente desea eliminar la orden de trabajo?'}
             onConfirm={()=>handleDeleteWorkOrder()}
             onCancel={()=>setDeleteAlertVisibility(false)}
+            />
+            }
+            {maintenanceReportVisibility &&
+            <NewMaintenanceReport
+            handleClose={()=>setMaintenanceReportVisibility(false)}
             />
             }
         </>

@@ -1,0 +1,65 @@
+.maintenance-report-box {
+    background-color: #212e49;
+    min-width: 50%;
+    min-height: 100%;
+    margin: 2%;
+    padding: 2%;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.report-pm-table {
+    width: 100%;
+    color: white;
+    border-collapse: separate;
+    border-spacing: 0 10px;
+    margin: 0; /* Elimina márgenes en la tabla */
+}
+
+.report-pm-table th, .report-pm-table td {
+    padding: 12px;
+    text-align: left;
+}
+
+.report-pm-table th {
+    background-color: #2c4166;
+    color: #e0e6ed;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.report-pm-table td {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.report-pm-table th:nth-child(n+1), /* Targeting all columns */
+.report-pm-table td:nth-child(n+1) {
+    width: 15%; /* Width for other columns */
+}
+
+.report-pm-table th:nth-child(5), /* Targeting the "Notas" column */
+.report-pm-table td:nth-child(5) {
+    width: 200px; /* Width for the "Notas" column */
+}
+
+.report-pm-table tr {
+    background-color: #2c4166;
+}
+
+.report-pm-table tr:hover {
+    background-color: #344b7a;
+} 
+
+
+.report-text-area{
+    box-sizing: border-box;
+    min-height: 70px;
+    background-color: #2c4166;
+    color: white;
+    border-color: rgba(0, 255, 255, 0.219);
+}
+
+.maintenance-report-button{
+    background-color:#212e49;
+    font-family: 'Verdana';
+}

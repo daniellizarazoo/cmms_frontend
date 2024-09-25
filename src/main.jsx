@@ -7,7 +7,7 @@ import App from './App.jsx';
 // Login Dashboard
 import saveTokenReducer from './Dashboard/Login/reducers/userReducer.js';
 import notificacionReducer from './Dashboard/Login/reducers/notificacion.js';
-
+import { BrowserRouter as Router } from 'react-router-dom';
 
 const rootReducer = combineReducers({
   saveTokenReducer : saveTokenReducer,
@@ -19,7 +19,9 @@ const store = createStore(rootReducer);
 createRoot(document.getElementById('root')).render(
   <StrictMode>
       <Provider store={store}>
-          <App />
+        <Router>
+          <App/>
+        </Router>
       </Provider>
   </StrictMode>,
 ) 

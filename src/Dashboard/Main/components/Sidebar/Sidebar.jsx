@@ -1,17 +1,12 @@
 import './Sidebar.css';
-// import usersIcon from './icons/usersIcon.svg';
-// import assetIcon from './icons/assetIcon.svg';
-// import workOrderIcon from './icons/workOrderIcon.svg';
-// import reportIcon from './icons/reportIcon.svg';
-// import inventoryIcon from './icons/inventoryIcon.svg';
+import { Link } from 'react-router-dom';
 
 const adminMenu = () => (
     <>
         <li className="sidebar-item">
-            <a href="/admin" className="sidebar-link">
-                {/* <img src={usersIcon} alt="Users Icon" className="sidebar-icon" /> */}
+            <Link to="/admin" className="sidebar-link">
                 Usuarios
-            </a>
+            </Link>
         </li>
         {maintenanceManagerMenu()}
     </>
@@ -20,21 +15,19 @@ const adminMenu = () => (
 const inventoryManagerMenu = () => (
     <>
         <li className="sidebar-item">
-            <a href="/inventario" className="sidebar-link">
-                {/* <img src={inventoryIcon} alt="Inventory Icon" className="sidebar-icon" /> */}
+            <Link to="/inventario" className="sidebar-link">
                 Inventario
-            </a>
+            </Link>
         </li>
     </>
-)
+);
 
 const maintenanceManagerMenu = () => (
     <>
         <li className="sidebar-item">
-            <a href="/equipos" className="sidebar-link">
-                {/* <img src={assetIcon} alt="Asset Icon" className="sidebar-icon" /> */}
+            <Link to="/equipos" className="sidebar-link">
                 Equipos
-            </a>
+            </Link>
         </li>
         {technicianMenu()}
         {reliabilityEngineerMenu()}
@@ -45,40 +38,35 @@ const maintenanceManagerMenu = () => (
 const reliabilityEngineerMenu = () => (
     <>
         <li className="sidebar-item">
-            <a href="/reportes" className="sidebar-link">
-                {/* <img src={reportIcon} alt="Reports Icon" className="sidebar-icon" /> */}
+            <Link to="/reportes" className="sidebar-link">
                 Reportes
-            </a>
+            </Link>
         </li>
     </>
-)
+);
 
 const technicianMenu = () => (
     <>
         <li className="sidebar-item">
-            <a href="/mantenimientopredictivo" className="sidebar-link">
-                {/* <img src={assetIcon} alt="Asset Icon" className="sidebar-icon" /> */}
+            <Link to="/mantenimientopredictivo" className="sidebar-link">
                 Mantenimiento predictivo
-            </a>
+            </Link>
         </li>
         <li className="sidebar-item">
-            <a href="/ordentrabajo" className="sidebar-link">
-                {/* <img src={workOrderIcon} alt="Asset Icon" className="sidebar-icon" /> */}
+            <Link to="/ordentrabajo" className="sidebar-link">
                 Orden de trabajo
-            </a>
+            </Link>
         </li>
         <li className="sidebar-item">
-            <a href="/reportemantenimiento" className="sidebar-link">
-                {/* <img src={reportIcon} alt="Report Icon" className="sidebar-icon" /> */}
+            <Link to="/reportemantenimiento" className="sidebar-link">
                 Reporte mantenimiento
-            </a>
+            </Link>
         </li>
     </>
-)
-
+);
 
 const Sidebar = ({ roleid }) => {
-    const role = parseInt(roleid, 10); // Ensure the role ID is parsed as an integer
+    const role = parseInt(roleid, 10);
     const ADMIN = 1;
     const INVENTORYMANAGER = 2;
     const MAINTENANCEMANAGER = 3;
@@ -99,4 +87,3 @@ const Sidebar = ({ roleid }) => {
 };
 
 export default Sidebar;
-

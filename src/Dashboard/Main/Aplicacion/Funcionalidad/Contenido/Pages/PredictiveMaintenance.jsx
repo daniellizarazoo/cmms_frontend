@@ -56,7 +56,7 @@ const PredictiveMaintenance = () => {
 
     const handleRightClickArrow = useCallback(() => {
         setActualPage(prevState => Math.min(prevState + 1, (totalPages - 1)));
-    },[]);
+    },[totalPages]);
 //---------DATOS A MOSTRAR EN TABLA ----------------------
     const slicedDataToShow = useMemo(()=>{
         const start = actualPage * 10;

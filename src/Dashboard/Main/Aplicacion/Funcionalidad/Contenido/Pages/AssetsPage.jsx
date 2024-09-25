@@ -284,7 +284,7 @@ const AssetsPage = () => {
     // Memoize the handleLeftClickArrow function
     const handleLeftClickArrow = useCallback(() => {
         setPageSlice(prevState => Math.max(prevState - 10, 0));
-    }, [numberOfPages]);
+    }, []);
 
     // Memoize the handleRightClickArrow function
     const handleRightClickArrow = useCallback(() => {
