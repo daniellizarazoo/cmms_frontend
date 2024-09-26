@@ -24,7 +24,7 @@
     font-family: 'Arial', sans-serif; /* Sets the font family */
     font-size: 3rem; /* Adjusts the font size */
     font-weight: bold; /* Makes the text bold */
-    
+    text-align: left;
     color: #FFFFFF; /* Sets the text color to white for contrast */
 }
 

@@ -4,7 +4,7 @@ import { useMemo, useState ,useCallback} from 'react';
 import Arrows from './Components/Arrows';
 import Overlay from './Components/Overlay';
 import DeleteAlert from './Components/DeleteAlert';
-import Notification from '../../../../../Login/components/Notificacion';
+import Notification from '../../Login/components/Notificacion';
 
 const pmTasks = [
     { id:0,assetName: 'PM001',   task: 'Lubrication', schedule: 'weekly', nextdue: '2023-06-15', status: 'Vencido', notes:'Hay que lubricar balineras1 y estoy probando muchas cosas para que uds sajdsdjaskl'},

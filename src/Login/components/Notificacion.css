@@ -16,7 +16,8 @@
 
 .notificacionCaja label {
     margin: 0;                /* Remove default margin */
-    font-size: 1rem;          /* Adjust font size */
+    font-size: 1.2rem;          /* Adjust font size */
+    font-family: 'Verdana';
 }
 
 .notificacionCaja button {

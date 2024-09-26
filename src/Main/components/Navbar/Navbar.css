@@ -15,18 +15,20 @@
     margin: 0 auto; /* Center align horizontally if needed */
 }
 
-.highlight{
+.navbar-highlight{
     color:yellow;
 }
 
 /* Apply Viga font to Navbar */
-.Navbar h2, .Navbar h1 {
+.navbar-h2, .Navbar h1 {
     margin: 0;
     font-family: 'Lato', sans-serif;
 }
 
-.Navbar h2 {
+.navbar-h2 {
     font-size: 1.5em; /* Font size for the title */
+    cursor: pointer;
+    user-select: none;
 }
 
 .Navbar h1 {
@@ -34,7 +36,7 @@
 }
 
 /* Styling for right section to avoid overflow */
-.right-section {
+.navbar-right-section {
     display: flex;
     align-items: center; /* Vertically center items */
     max-width: calc(100% - 60px); /* Adjust as needed to fit within the container */

@@ -1,12 +1,12 @@
 // import { Fragment } from 'react';
-import './loginDashboard.css';
+import './LoginDashboard.css';
 import Advice from './components/advice';
 import LoginForm from './components/LoginForm';
 import Notification from './components/Notificacion';
-import { useSelector } from 'react-redux';
+// import { useSelector } from 'react-redux';
 
 const LoginDashboard = () => {
-    const notificationMessage = useSelector(state => state.notificacionReducer.value);
+    // const notificationMessage = useSelector(state => state.notificacionReducer.value);
     
     return (
         <div className='cajaFondo'>
@@ -14,7 +14,7 @@ const LoginDashboard = () => {
             <div className='loginDashboardMainBox'>
                     <Advice/>
                     <LoginForm/>
-                    <Notification error={notificationMessage}/>
+                    <Notification error={''}/>
             </div>
         </div>
     );

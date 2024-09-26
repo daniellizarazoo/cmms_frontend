@@ -10,7 +10,8 @@
     flex-direction: column;
     align-items: center;
     padding: 10px;
-    position: relative; /* Necesario para posicionar el formulario */
+    position: relative; /* Necesario para posicionar el formulario */;
+    font-family: 'Verdana';
 }
 
 h2 {
@@ -68,7 +69,8 @@ input {
 }
 
 .checkBox input[type="checkbox"] {
-    margin: 0;               /* Elimina el margen predeterminado */
+    margin: 0; 
+    cursor: pointer;              /* Elimina el margen predeterminado */
     vertical-align: middle; /* Asegura que el checkbox se alinee verticalmente con el texto */
     width: 20px;             /* Ajusta el ancho del checkbox */
     height: 20px;            /* Ajusta la altura del checkbox */

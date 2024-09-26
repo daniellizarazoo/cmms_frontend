@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 const adminMenu = () => (
     <>
         <li className="sidebar-item">
-            <Link to="/admin" className="sidebar-link">
+            <Link to="admin" className="sidebar-link">
                 Usuarios
             </Link>
         </li>
@@ -15,7 +15,7 @@ const adminMenu = () => (
 const inventoryManagerMenu = () => (
     <>
         <li className="sidebar-item">
-            <Link to="/inventario" className="sidebar-link">
+            <Link to="inventario" className="sidebar-link">
                 Inventario
             </Link>
         </li>
@@ -25,7 +25,7 @@ const inventoryManagerMenu = () => (
 const maintenanceManagerMenu = () => (
     <>
         <li className="sidebar-item">
-            <Link to="/equipos" className="sidebar-link">
+            <Link to="equipos" className="sidebar-link">
                 Equipos
             </Link>
         </li>
@@ -38,7 +38,7 @@ const maintenanceManagerMenu = () => (
 const reliabilityEngineerMenu = () => (
     <>
         <li className="sidebar-item">
-            <Link to="/reportes" className="sidebar-link">
+            <Link to="reportes" className="sidebar-link">
                 Reportes
             </Link>
         </li>
@@ -48,17 +48,17 @@ const reliabilityEngineerMenu = () => (
 const technicianMenu = () => (
     <>
         <li className="sidebar-item">
-            <Link to="/mantenimientopredictivo" className="sidebar-link">
+            <Link to="mantenimientopredictivo" className="sidebar-link">
                 Mantenimiento predictivo
             </Link>
         </li>
         <li className="sidebar-item">
-            <Link to="/ordentrabajo" className="sidebar-link">
+            <Link to="ordentrabajo" className="sidebar-link">
                 Orden de trabajo
             </Link>
         </li>
         <li className="sidebar-item">
-            <Link to="/reportemantenimiento" className="sidebar-link">
+            <Link to="reportemantenimiento" className="sidebar-link">
                 Reporte mantenimiento
             </Link>
         </li>

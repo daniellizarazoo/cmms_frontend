@@ -3,7 +3,7 @@ import './UsersPage.css';
 import { useState } from 'react';
 import arrowLeftIcon from './icons/arrowLeftIcon.png';
 import arrowRightIcon from './icons/arrowRightIcon.png';
-import Notification from '../../../../../Login/components/Notificacion';
+import Notification from '../../Login/components/Notificacion';
 
 const users = [
     {

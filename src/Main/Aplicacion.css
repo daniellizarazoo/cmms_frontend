@@ -14,5 +14,4 @@
     overflow: auto; /* Permite el scroll si el contenido es mayor que la pantalla */
     background-color: #1C2039;
     display: flex;
-    
 }

@@ -2,7 +2,7 @@ import './Notificacion.css'
 
 const Notification = ({isError=false,message=null}) => {
 
-    if (isError && message!=null){
+    if (isError && message!=null && message!=''){
         return (
             <div className='notificacionCaja'>
                 <label>{message}</label>
